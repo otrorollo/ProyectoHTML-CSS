@@ -1,0 +1,25 @@
+.footer {
+  align-items: center;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  /*    1rem -> 16 px */
+  /*    1em -> 16 px */
+  font-size: 1rem;
+  /* gradiente */
+  background: radial-gradient(
+    circle,
+    rgb(157, 55, 155) 0%,
+    #0e1b4f 70%,
+    #000413 100%
+  );
+}
+@media screen and (width > 768px) {
+  background: radial-gradient(
+    51.39% 511.66% at 47.68% -217.91%,
+    #ff9900 0%,
+    #e50914 17.27%,
+    #0e1b4f 79.44%,
+    #000413 100%
+  );
+}

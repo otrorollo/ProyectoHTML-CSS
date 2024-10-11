@@ -1,0 +1,29 @@
+/* @media screen and (min-width: 768px) { */
+@media screen and (width > 768px) {
+  .hidden {
+    display: block;
+  }
+}
+
+/* Estilos para el logo */
+#logo-link {
+  display: inline-block;
+}
+.light-mode {
+  display: block; /* Visible por defecto */
+}
+.dark-mode {
+  display: none; /* Oculto por defecto */
+}
+/* Estilos para el modo oscuro */
+#dark-mode-toggle:checked ~ body {
+  /* Se aplica cuando el checkbox está marcado */
+  background-color: #000; /* Cambia el color de fondo */
+  color: #fff; /* Cambia el color del texto */
+}
+#dark-mode-toggle:checked ~ body .light-mode {
+  display: block; /* Oculta el logo claro en modo oscuro */
+}
+#dark-mode-toggle:checked ~ body .dark-mode {
+  display: none; /* Muestra el logo  en modo oscuro */
+}

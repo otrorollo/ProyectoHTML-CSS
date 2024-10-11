@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <title> John Wick PORTFOLIO</title>
+    <!-- imagen en pestaña-->
+    <link 
+      rel="icon"
+      type="image/png"
+      href="./assets/img/FAVICON JOHN 32X32.png"
+      alt="IMAGEN EN PESTAÑA WEB">
+    <meta
+        name="description"
+        content=" portfolio index page - John Wick person"
+      />
+    <meta
+        name="author"
+        content="Rubén Ponce - rdruben - rderubenp@gmail.com"
+      />
+      <link rel="stylesheet" href="/styles/structure/normalize.css"/>
+      <link rel="stylesheet" href="/styles/index/header.css">
+      <link rel="stylesheet" href="/styles/structure/body.css"/>
+      <link rel="stylesheet" href="/styles/structure/skills.css"/>
+      <link rel="stylesheet" href="/styles/structure/footer.css">
+      <title>John Wick' Portfolio</title>
+  </head>
+
+<body class="main-bg">
+  <!-- Aquí irá la navegación y la presentación de John Wick -->
+  <!-- RECORDARIO: Los URL en HTML se crean utilizando la etiqueta <a> -->
+  <input type="checkbox" id="dark-mode-toggle" hidden> 
+  <header class="body-header"> 
+    <a href="#dark-mode-toggle" id="logo-link">
+    <img
+    class="light-mode" 
+    id="dark-logo-hero"
+    src="assets/img/cara JW.png"
+    alt="imagen personaje oscuro contraste con pagina light"
+    >
+    <img
+    class="dark-mode" 
+    id="white-logo-hero"
+    src="assets/img/cara JW white.png"
+    alt="imagen personaje blanco contraste con pagina dark">  
+    </a>
+    
+    <!-- creación de la navegación -->
+    <div class="container"></div>
+      <nav aria-label="Main web navigation">
+        <ul>
+            <li class="Home">
+              <a href="/index.html">
+                <img src="/assets/logos/hotel.ico" alt="home">
+                  HOME</a></li>
+
+            <li class="hero">
+              <a href="/index.html">
+                <img src="/assets/logos/burbuja-de-chat.png" alt="ABOUT">
+                  ABOUT</a></li>
+
+            <li class=""#Biografía">
+              <a href="/index.html">
+                <img src="/assets/logos/usuario dark.png" alt="BIO">
+                  BIO</a></li>
+
+            <li class="skills">
+              <a href="/index.html">
+                <img src="/assets/logos/pensamiento-critico.png" alt="skills">
+                  SKILLS</a></li>
+
+            <li class="proyect">
+              <a href="/proyects.html">
+                <img src="/assets/logos/escalera-del-exito.png" alt="proyects">
+                  PROYECT</a></li> 
+
+            <li class="form">
+              <a href="/signin.html">
+                <img src="/assets/logos/habilidades.png" alt="formulario">
+                FORM</a></li> 
+        </ul>
+    </nav>
+    
+  </header>
+
+  <main> 
+    <section class="hero">
+      <h1><span>Yo soy</span> John Wick</h1>
+      <p>Ex-asesino a sueldo y experto en artes marciales</p>
+      <img src="/assets/img/john puños.jpg" alt="frontal foto personaje">
+    <section id="Biografía">
+      <!-- Aquí irá la información sobre John Wick -->
+      <h3>BIOGRAFÍA</h3>
+      <p>Me conocen por muchos nombres... 
+        <strong>Nombre:</strong>  John Wick
+        <strong>Alias:</strong>  Baba Yaga (El Hombre del Saco) 
+        <strong>Te contaré qué: </strong>  
+        Soy Ex-asesino a sueldo retirado, soy Experto en artes marciales y manejo de armas y estoy realmente motivado por la venganza trás la muerte de mi perro.
+        Nací en la unión Soviética, quedé huérfano a una edad temprana antes de ser acogido por un viejo amigo de mi padre, que acabó convirtiéndose en mi mentor. Pasé gran parte de su adolescencia en Ensenada, Baja California. En un momento dado, fuí reclutado por un grupo del CMMP y entrenado por su líder, una mujer conocida como "la Directora", en Nueva York. Bajo la supervisión de la Directora, fuí entrenado como asesino a sueldo y aprendí habilidades que incluían artes marciales, armas de fuego y de otro tipo, conducción táctica, infiltración, escapología, etc. Mi nombre real es Jovonovich adopté más tarde el nombre de "Jonathan Wick", o "John Wick" para abreviar, como forma anglicista de mi nombre de nacimiento.</p>
+    </section>
+    <section>
+        <!-- Aquí irán las habilidades de John Wick con barras de progreso -->
+        <h3 class="skills" id="skills">Habilidades</h3>
+        <div>
+          <h4>Combate cuerpo a cuerpo: 95% </h4>
+          <progress value="95" max="100"></progress>
+          <h4>Puntería: 98% </h4>
+          <progress value="98" max="100"></progress>
+          <h4>Estrategia: 90%</h4>
+          <progress value="90" max="100"></progress>
+          <h4>Supervivencia: 93%</h4> 
+          <progress value="93" max="100"></progress>
+          <h4>Conducción: 88%</h4> 
+          <progress value="88" max="100"></progress>
+          <h4>Amor a su perro:100%</h4>
+          <progress value="100" max="100"></progress>
+        </div>
+    </section>
+  </main>
+      
+  <!--::::::::::::::::: PIE DE PAGINA :::::::::::::: -->
+  <!-- Aquí irá el pie de página con información de contacto y enlaces -->
+  <footer class="footer">
+      <div>
+        <h2 class="bio-footer">¿Quién soy?</h2>
+        <p> Mi nombre es 
+          <strong> Rubén Ponce </strong> 
+          Estudiante en KeepCoding de Programación web full Stack
+          Edicion 17
+          Realización del Proyecto WEB en HTML/CSS </p>
+        <>
+          <nav
+            aria-label="Footer personal social networks"
+            role="navigation">
+            <ul>
+              <!-- GITHUB personal -->
+              <li>
+                <a
+                  href="https://github.com/otrorollo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Ruben Ponce's Github profile"
+                  title="to Ruben Ponce' Github profile"
+                >
+                <img
+                  class="icon-dark"
+                  src="/assets/logos/github white.png"
+                  alt="Github dark mode">
+                <img
+                  class="icon-light"
+                  src="/assets/logos/github black1.png"
+                  alt="Github light-mode">
+                </a>
+              </li>
+              <!-- linkedin personal -->
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/rubenponce/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Rubén Ponce's Linkedin profile"
+                  title="to Rubén Ponce's Linkedin profile">
+                <img
+                  class="light-mode "
+                  src="assets/logos/linkedin dark.png"
+                  alt="Linkedin light-mode">
+                <img
+                  class="dark-mode wide-logo"
+                  src=""
+                  alt="Linkedin dark-mode">
+                </a>
+                </li>
+          </nav>
+      </div>
+      <div class="Profe">
+        <p>
+          <span> Special thanks </span>  to 
+          <a
+            class="link"
+            href="https://github.com/kevinccbsg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kevin's Github profile"
+            title="to Kevin's Github profile">
+            <strong>@kevinccbsg</strong>
+          </a>
+          <!-- target...Indica abrir enlace en otra pestaña
+          rel="noopener noreferrer" por razones de seguridad para prevencion de entrada o info a la web.
+          -->
+        </p>
+      </div>
+    <!--:::ubicación redes sociales -->
+    <nav
+    aria-label="Footer social networks John Wick"
+    role="navigation"
+    >
+      <ul>
+          <!-- instagram -->
+          <li>
+            <a
+            href="https://www.instagram.com/johnwick.de/?hl=es"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit John Wick's Instagram profile"
+            title="to Jonh Wick's Instagram profile"
+            >
+            <img
+              class="icon-dark"
+              src="/assets/logos/instagram white.png"
+              alt="Instagram logo dark-mode">
+
+            <img
+              class="icon-light"
+              src="assets/logos/instagram.png"
+              alt="Instagram logo light-mode">
+            </a>
+          </li>
+          <!-- youtube -->
+          <li>
+            <a
+            href="https://www.youtube.com/channel/UCwg9IHNr0n05ebKhfDubuzQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit John Wick's youtube profile"
+            title="to Jonh Wick' Youtube profile"
+            >
+            <img
+              class="icon-dark"
+              src="assets/logos/youtube white.png"
+              alt="youtube logo dark-mode">
+            <img
+              class="icon-light"
+              src="assets/logos/youtube black.png "
+              alt="youtube logo light-mode">
+            </a>
+          </li>
+      </ul>
+    </nav>
+      <div class="pie_footer">
+        <p>
+          © <strong>RdRuben</strong>
+          <span class="inline-pie">Almost all rights reserved | 2024</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

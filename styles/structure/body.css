@@ -1,0 +1,20 @@
+/*Generalizo la estetica de la web*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .ligh-mode { 
+  padding: 0.8%;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  }
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
