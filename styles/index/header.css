@@ -1,60 +1,110 @@
 /* header.css */
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --header-bg: #f0f0f0;
+
+  --bg-color-dark: #222;
+  --text-color-dark: #fff;
+  --header-bg-dark: #333;
+}
+
+
+body {
+  transition: background-color 0.50s ease, color 0.3s ease;
+}
 
 .body-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: var(--header-bg);
 }
 
-#logo-link img {
-  width: 100px; 
-  height: auto;
+#logo-link {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: relative;
   cursor: pointer;
 }
 
-.dark-mode {
-  display: none;
+#logo-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
 }
 
-#dark-mode-toggle:checked + #logo-link .light-mode {
-  display: none;
+#logo-link .dark-mode {
+  opacity: 0;
 }
 
-#dark-mode-toggle:checked + #logo-link .dark-mode {
-  display: block;
+#dark-mode-toggle:checked ~ .body-header #logo-link .light-mode {
+  opacity: 0;
+}
+
+#dark-mode-toggle:checked ~ .body-header #logo-link .dark-mode {
+  opacity: 1;
 }
 
 /* Estilos para el body en modo dark */
 #dark-mode-toggle:checked ~ body {
-  background-color: #000 !important; 
-  color: #fff !important; 
-}
-/* Estilos para el body en modo light */
-#dark-mode-toggle:checked ~ body .ligh-mode {
-  background-color: #fff !important; 
-  color: #000 !important; 
+  --bg-color: #000;
+  --text-color: #fff;
+  --header-bg: #333;
 }
 
 /* Estilos para la navegación */
 nav ul {
-  list-style: none; 
+  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav li {
-  margin-left: 20px; 
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 nav a {
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 nav a img {
-  width: 20
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .body-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  #logo-link {
+    width: 80px;
+    height: 80px;
+  }
 }
