@@ -9,9 +9,17 @@
   --header-bg-dark: #333;
 }
 
-
 body {
-  transition: background-color 0.50s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.contenedor-principal {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .body-header {
@@ -20,6 +28,7 @@ body {
   align-items: center;
   padding: 20px;
   background-color: var(--header-bg);
+  transition: background-color 0.5s ease;
 }
 
 #logo-link {
@@ -44,19 +53,22 @@ body {
   opacity: 0;
 }
 
-#dark-mode-toggle:checked ~ .body-header #logo-link .light-mode {
+/* Cambio a modo oscuro */
+#dark-mode-toggle:checked ~ .contenedor-principal {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+#dark-mode-toggle:checked ~ .contenedor-principal .body-header {
+  background-color: var(--header-bg-dark);
+}
+
+#dark-mode-toggle:checked ~ .contenedor-principal #logo-link .light-mode {
   opacity: 0;
 }
 
-#dark-mode-toggle:checked ~ .body-header #logo-link .dark-mode {
+#dark-mode-toggle:checked ~ .contenedor-principal #logo-link .dark-mode {
   opacity: 1;
-}
-
-/* Estilos para el body en modo dark */
-#dark-mode-toggle:checked ~ body {
-  --bg-color: #000;
-  --text-color: #fff;
-  --header-bg: #333;
 }
 
 /* Estilos para la navegación */
