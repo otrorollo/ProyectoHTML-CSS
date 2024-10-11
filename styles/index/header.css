@@ -1,29 +1,60 @@
-/* @media screen and (min-width: 768px) { */
-@media screen and (width > 768px) {
-  .hidden {
-    display: block;
-  }
+/* header.css */
+
+.body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Estilos para el logo */
-#logo-link {
-  display: inline-block;
+#logo-link img {
+  width: 100px; 
+  height: auto;
+  cursor: pointer;
 }
-.light-mode {
-  display: block; /* Visible por defecto */
-}
+
 .dark-mode {
-  display: none; /* Oculto por defecto */
+  display: none;
 }
-/* Estilos para el modo oscuro */
+
+#dark-mode-toggle:checked + #logo-link .light-mode {
+  display: none;
+}
+
+#dark-mode-toggle:checked + #logo-link .dark-mode {
+  display: block;
+}
+
+/* Estilos para el body en modo dark */
 #dark-mode-toggle:checked ~ body {
-  /* Se aplica cuando el checkbox está marcado */
-  background-color: #000; /* Cambia el color de fondo */
-  color: #fff; /* Cambia el color del texto */
+  background-color: #000 !important; 
+  color: #fff !important; 
 }
-#dark-mode-toggle:checked ~ body .light-mode {
-  display: block; /* Oculta el logo claro en modo oscuro */
+/* Estilos para el body en modo light */
+#dark-mode-toggle:checked ~ body .ligh-mode {
+  background-color: #fff !important; 
+  color: #000 !important; 
 }
-#dark-mode-toggle:checked ~ body .dark-mode {
-  display: none; /* Muestra el logo  en modo oscuro */
+
+/* Estilos para la navegación */
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+}
+
+nav li {
+  margin-left: 20px; 
+}
+
+nav a {
+  text-decoration: none; 
+  color: inherit; 
+  display: flex;
+  align-items: center; 
+}
+
+nav a img {
+  width: 20
 }
