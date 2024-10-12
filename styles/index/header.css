@@ -3,10 +3,13 @@
   --bg-color: #fff;
   --text-color: #000;
   --header-bg: #f0f0f0;
+  --hover-color-light: #e0e0e0;
 
   --bg-color-dark: #222;
   --text-color-dark: #fff;
   --header-bg-dark: #333;
+  --hover-color-dark: #555;
+
 }
 
 body {
@@ -71,6 +74,11 @@ body {
   opacity: 1;
 }
 
+/* Hover para modo oscuro */
+#dark-mode-toggle:checked ~ .contenedor-principal nav a:hover {
+  background-color: var(--hover-color-dark);
+}
+
 /* Estilos para la navegación */
 nav ul {
   list-style: none;
@@ -88,10 +96,18 @@ nav li {
 }
 
 nav a {
+  padding: 10px 15px; 
+  border-radius: 5px;
+  
+  transition: background-color 0.3s ease; 
   text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
+}
+
+nav a:hover {
+  background-color: var(--hover-color-light); 
 }
 
 nav a img {
