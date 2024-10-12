@@ -6,7 +6,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-body .ligh-mode { 
-  padding: 0.8%;
-  font-size: 25px;
-  }
+body {
+  font-family: 'Anton SC', sans-serif;
+  /* Otros estilos */
+}
+
+body.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
