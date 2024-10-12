@@ -5,7 +5,7 @@
   --header-bg: #f0f0f0;
   --hover-color-light: #e0e0e0;
 
-  --bg-color-dark: #222;
+  --bg-color-dark: #000000;
   --text-color-dark: #fff;
   --header-bg-dark: #333;
   --hover-color-dark: #555;
@@ -66,6 +66,12 @@ body {
   background-color: var(--header-bg-dark);
 }
 
+#dark-mode-toggle:checked ~ .contenedor-principal .hero h1,
+#dark-mode-toggle:checked ~ .contenedor-principal .hero p {
+  background-color: transparent; /* Sin fondo */
+  color: var(--text-color-dark); /* Texto blanco en modo oscuro */
+}
+
 #dark-mode-toggle:checked ~ .contenedor-principal #logo-link .light-mode {
   opacity: 0;
 }
@@ -81,29 +87,28 @@ body {
 
 /* Estilos para la navegación */
 nav ul {
-  list-style: none;
-  width: 100%;
-  display: flex;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 nav li {
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 1; /*Con esto soluciono el problema de descompensacion del nav, form se me iba abajo*/
 }
 
 nav a {
+  display: flex;
+  align-items: center;
   padding: 10px 15px; 
   border-radius: 5px;
-  
   transition: background-color 0.3s ease; 
   text-decoration: none;
   color: inherit;
-  display: flex;
-  align-items: center;
+ 
 }
 
 nav a:hover {
@@ -111,40 +116,122 @@ nav a:hover {
 }
 
 nav a img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  margin-right: 5px; /*Espacio entre icono y texto*/
 }
 
+
 /* Media queries */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
   .body-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero h1 {
-    font-size: 2.5rem; /* Tamaño para pantallas grandes */
-  }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 1.8rem; /* Tamaño más pequeño para móviles */
-      margin-bottom: 15px; /* Espacio debajo del título*/
-    }
+    padding: 15px;
   }
 
   nav ul {
-    flex-direction: column;
-    margin-top: 20px;
+    justify-content: center;
   }
 
-  nav li {
-    margin-left: 0;
-    margin-bottom: 15px;
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
 
   #logo-link {
     width: 80px;
     height: 80px;
+    margin-bottom: 15px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  nav li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 span {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  #Biografía, #skills {
+    padding: 20px 10px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body-header {
+    padding: 5px;
+  }
+
+  #logo-link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h1 span {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
   }
 }

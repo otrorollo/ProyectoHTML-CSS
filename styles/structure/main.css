@@ -1,120 +1,83 @@
-/* Estilos generales (mobile-first) */
+/* Estilos generales */
 main {
   padding: 20px;
   max-width: 100%;
   margin: 0 auto;
 }
 
+/* Estilos para la sección hero */
 .hero {
+  position: relative;
   text-align: center;
-  max-width: 100%;
-  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px; /* Ajusta este valor según la altura de tu header */
 }
 
-h1 {
-  font-size: 2px;
-  margin-bottom: 10px;
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2;
+  background-color: transparent; /* Fondo de la imagen */
+  color: var(--text-color);
+  padding: 10px;
+  margin: 0 auto 10px;
+  max-width: 80%;
 }
 
-h1 span {
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h1 span {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .hero p {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
-.hero-image {
+.hero img {
   width: 100%;
-  max-width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.nav a:hover {
-  background-color: blueviolet;
-  cursor: pointer;
-}
-
-/* Estilos para la biografía y habilidades */
-#Biografía,
-#skills {
-  margin-top: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h4 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-/* Estilos para tablet */
+/* Media queries para responsividad */
 @media screen and (min-width: 768px) {
-  main {
-    padding: 30px;
+  .hero h1 {
+    font-size: 5rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h1 span {
-    font-size: 2rem;
+  .hero h1 span {
+    font-size: 2.2rem;
   }
 
   .hero p {
-    font-size: 1.2rem;
-  }
-
-  .hero-image {
-    max-width: 400px;
+    font-size: 1.4rem;
   }
 }
 
-/* Estilos para desktop */
 @media screen and (min-width: 1024px) {
   main {
     padding: 40px;
-    max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
   }
 
-  h1 {
-    font-size: 3rem;
+  .hero h1 {
+    font-size: 7rem;
   }
 
-  h1 span {
+  .hero h1 span {
     font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
-  .hero-image {
-    max-width: 500px;
-  }
-
-  /* Opcional: layout de dos columnas para desktop */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .hero-text {
-    flex: 1;
-    text-align: left;
-    padding-right: 40px;
-  }
-
-  .hero-image {
-    flex: 1;
+  .hero img {
+    max-width: 1000px;
   }
 }
