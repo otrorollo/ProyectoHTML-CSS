@@ -26,10 +26,10 @@
         content="Rubén Ponce - rdruben - rderubenp@gmail.com"
       />
       <link rel="stylesheet" href="/styles/structure/normalize.css"/>
+      <link rel="stylesheet" href="/styles/structure/body.css"/>
       <link rel="stylesheet" href="/styles/index/header.css">
       <link rel="stylesheet" href="/styles/index/Nav.css">
       <link rel="stylesheet" href="/styles/structure/main.css"/>
-      <link rel="stylesheet" href="/styles/structure/body.css"/>
       <link rel="stylesheet" href="/styles/structure/skills.css"/>
       <link rel="stylesheet" href="/styles/structure/footer.css">
       <title>John Wick' Portfolio</title>
@@ -91,7 +91,7 @@
     
   </header>
   <main class="holy-grail-layout">
-    <div class= "left-sidebar"></div> 
+    <!--<div class= "left-sidebar"></div> ::: -->
       <div class="main-content"></div>
       <section class="hero">
         <div class="hero-text">
@@ -113,7 +113,7 @@
             alt="frontal foto personaje" >
           </div>
           <!-- 100% del ancho en móviles, 80% en tablets y pantallas medianas, y 60% en pantallas grandes, aclaro para recordar-->
-        </section>
+      </section>
       <section id="Biografía" class="Biografía">
         <!-- Aquí irá la información sobre John Wick -->
         <h3>BIOGRAFÍA</h3>
@@ -129,7 +129,7 @@
       </section>
       <section id="skills">
           <!-- Aquí irán las habilidades de John Wick con barras de progreso -->
-          <h3>Habilidades</h3>
+          <h3>HABILIDADES</h3>
             <div class="skills-container"></div>
               <div class="skill-item">
                 <h4>Combate cuerpo a cuerpo: 95% </h4>
@@ -157,134 +157,251 @@
               </div>
             </div>
         </section>
-      <div class="right-sidebar"></div>
+      <!--:::::<div class="right-sidebar"></div> ::: -->
     </section>
-  
+    <section
+    class="contact"
+    id="contact"
+    aria-labelledby="contact-form-heading"
+  >
+    <h2 class="sr-only" id="contact-form-heading">Contact form</h2>
+    <form role="form" aria-label="Contact me form" method="post" action="">
+      <div class="group-2-fields">
+        <div class="text-input">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+            placeholder="put your name here (required)"
+          />
+        </div>
+
+        <div class="text-input">
+          <label for="surname">Surname</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            required
+            aria-required="true"
+            placeholder="put your surname here (required)"
+          />
+        </div>
+      </div>
+
+      <div class="group-2-fields">
+        <div class="text-input">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            aria-required="true"
+            placeholder="put your phone here (required)"
+          />
+        </div>
+
+        <div class="text-input">
+          <label for="github-user">Github username</label>
+          <input
+            type="text"
+            id="github-user"
+            name="github-user"
+            required
+            pattern="^@[^\s]+"
+            title="Username must start with @. Example: @username"
+            aria-describedby="github-username-info"
+            aria-label="Github username (starting with @)"
+            aria-required="true"
+            placeholder="put your github username here (@<username>) (required)"
+          />
+          <span class="sr-only" id="github-username-info">
+            Github usernames must start with @
+          </span>
+        </div>
+      </div>
+
+      <fieldset
+        aria-labelledby="meeting-question"
+        aria-describedby="meeting-info"
+      >
+        <div>
+          <legend id="meeting-question">How did you meet me?</legend>
+          <span id="meeting-info" class="sr-only">
+            Please choose how we met
+          </span>
+        </div>
+        <div>
+          <label for="university">University</label>
+          <input
+            type="radio"
+            id="university"
+            name="meeting-way"
+            value="university"
+            required
+            aria-required="true"
+            aria-label="Met at University"
+          />
+        </div>
+
+        <div>
+          <label for="keepcoding">Keepcoding kick-off</label>
+          <input
+            checked
+            type="radio"
+            id="keepcoding"
+            name="meeting-way"
+            value="keepcoding kick off"
+            required
+            aria-required="true"
+            aria-label="Met at Keepcoding kick-off"
+          />
+        </div>
+
+        <div>
+          <label for="school">School</label>
+          <input
+            type="radio"
+            id="school"
+            name="meeting-way"
+            value="school"
+            required
+            aria-required="true"
+            aria-label="Met at School"
+          />
+        </div>
+
+        <div>
+          <label for="github">Github</label>
+          <input
+            type="radio"
+            id="github"
+            name="meeting-way"
+            value="github"
+            required
+            aria-required="true"
+            aria-label="Met via Github"
+          />
+        </div>
+      </fieldset>
+
+      <div class="text-input">
+        <label for="more-info">More info</label>
+        <textarea
+          id="more-info"
+          name="more-info"
+          maxlength="180"
+          rows="7"
+          required
+          aria-required="true"
+          aria-label="Additional information"
+          placeholder="more info about you here"
+        ></textarea>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="newsletter"
+          name="newsletter"
+          aria-labelledby="newsletter-label"
+        />
+        <label id="newsletter-label" for="newsletter"
+          >I want to subscribe to the newsletter</label
+        >
+      </div>
+
+      <div class="form-buttons">
+        <button
+          class="button"
+          type="submit"
+          aria-label="Submit the contact form"
+        >
+          Submit
+        </button>
+        <button
+          class="button"
+          type="reset"
+          aria-label="Reset the contact form fields"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
+  </section>
   </main>
   <!--::::::::::::::::: PIE DE PAGINA :::::::::::::: -->
   <!-- Aquí irá el pie de página con información de contacto y enlaces -->
   <footer class="footer">
-      <div>
-        <h2 class="bio-footer">¿Quién soy?</h2>
-        <p> Mi nombre es 
-          <strong> Rubén Ponce </strong> 
-          Estudiante en KeepCoding de Programación web full Stack
-          Edicion 17
-          Realización del Proyecto WEB en HTML/CSS </p>
-        <>
-          <nav
-            aria-label="Footer personal social networks"
-            role="navigation">
-            <ul>
-              <!-- GITHUB personal -->
-              <li>
-                <a
-                  href="https://github.com/otrorollo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Ruben Ponce's Github profile"
-                  title="to Ruben Ponce' Github profile"
-                >
-                <img
-                  class="icon-dark"
-                  src="/assets/logos/github white.png"
-                  alt="Github dark mode">
-                <img
-                  class="icon-light"
-                  src="/assets/logos/github black1.png"
-                  alt="Github light-mode">
-                </a>
-              </li>
-              <!-- linkedin personal -->
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/rubenponce/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Rubén Ponce's Linkedin profile"
-                  title="to Rubén Ponce's Linkedin profile">
-                <img
-                  class="light-mode "
-                  src="assets/logos/linkedin dark.png"
-                  alt="Linkedin light-mode">
-                <img
-                  class="dark-mode wide-logo"
-                  src=""
-                  alt="Linkedin dark-mode">
-                </a>
-                </li>
-          </nav>
+    <div class="footer-container">
+      <!-- Columna izquierda: Información personal -->
+      <div class="footer-column">
+        <h2>¿Quién soy?</h2>
+        <p><strong>Rubén Ponce</strong></p>
+        <ul>
+          <li>Estudiante en KeepCoding de Programación Web Full Stack</li>
+          <li>Edición 17</li>
+          <li>Proyecto WEB en HTML/CSS</li>
+        </ul>
+        <nav aria-label="Footer personal social networks">
+          <ul class="social-icons">
+            <li>
+              <a href="https://github.com/otrorollo" target="_blank" rel="noopener noreferrer" aria-label="Visit Ruben Ponce's Github profile">
+                <img class="icon icon-dark" src="/assets/logos/github_white_reducido.png" alt="Github dark mode">
+                <img class="icon icon-light" src="/assets/logos/github black-rd.png" alt="Github light mode">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rubenponce/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rubén Ponce's Linkedin profile">
+                <img class="icon icon-dark" src="/assets/logos/linkedinwhite.png" alt="Linkedin dark mode">
+                <img class="icon icon-light" src="/assets/logos/linkedinblack.png" alt="Linkedin light mode">
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="Profe">
-        <p>
-          <span> Special thanks </span>  to 
-          <a
-            class="link"
-            href="https://github.com/kevinccbsg"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Kevin's Github profile"
-            title="to Kevin's Github profile">
-            <strong>@kevinccbsg</strong>
-          </a>
-          <!-- target...Indica abrir enlace en otra pestaña
-          rel="noopener noreferrer" por razones de seguridad para prevencion de entrada o info a la web.
-          -->
-        </p>
+  
+      <!-- Columna central: Redes sociales del personaje -->
+      <div class="footer-column">
+        <h3>Redes Sociales de John Wick</h3>
+        <nav aria-label="Footer social networks John Wick">
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.instagram.com/johnwick.de/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Visit John Wick's Instagram profile">
+                <img class="icon icon-dark" src="/assets/logos/instagram white.png" alt="Instagram logo dark mode">
+                <img class="icon icon-light" src="/assets/logos/instagram.png" alt="Instagram logo light mode">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCwg9IHNr0n05ebKhfDubuzQ" target="_blank" rel="noopener noreferrer" aria-label="Visit John Wick's YouTube profile">
+                <img class="icon icon-dark" src="/assets/logos/youtube_white_od5usg.png" alt="YouTube logo dark mode">
+                <img class="icon icon-light" src="/assets/logos/youtube_black_otlfel.png" alt="YouTube logo light mode">
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    <!--:::ubicación redes sociales -->
-    <nav
-    aria-label="Footer social networks John Wick"
-    role="navigation"
-    >
-      <ul>
-          <!-- instagram -->
-          <li>
-            <a
-            href="https://www.instagram.com/johnwick.de/?hl=es"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit John Wick's Instagram profile"
-            title="to Jonh Wick's Instagram profile"
-            >
-            <img
-              class="icon-dark"
-              src="/assets/logos/instagram white.png"
-              alt="Instagram logo dark-mode">
-
-            <img
-              class="icon-light"
-              src="assets/logos/instagram.png"
-              alt="Instagram logo light-mode">
+  
+      <!-- Columna derecha: Derechos y agradecimientos -->
+      <div class="footer-column">
+        <div class="copyright">
+          <p>&copy; <strong>RdRuben</strong></p>
+        </div>
+        <div class="rights-and-thanks">
+          <p>Almost all rights reserved | 2024</p>
+          <p>
+            <span>Special thanks to</span>
+            <a href="https://github.com/kevinccbsg" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Kevin's Github profile">
+              <strong>@kevinccbsg</strong>
             </a>
-          </li>
-          <!-- youtube -->
-          <li>
-            <a
-            href="https://www.youtube.com/channel/UCwg9IHNr0n05ebKhfDubuzQ"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit John Wick's youtube profile"
-            title="to Jonh Wick' Youtube profile"
-            >
-            <img
-              class="icon-dark"
-              src="assets/logos/youtube white.png"
-              alt="youtube logo dark-mode">
-            <img
-              class="icon-light"
-              src="assets/logos/youtube black.png "
-              alt="youtube logo light-mode">
-            </a>
-          </li>
-      </ul>
-    </nav>
-      <div class="pie_footer">
-        <p>
-          © <strong>RdRuben</strong>
-          <span class="inline-pie">Almost all rights reserved | 2024</span>
-        </p>
+          </p>
       </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </footer>

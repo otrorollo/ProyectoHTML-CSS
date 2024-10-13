@@ -1,23 +1,50 @@
 /* body.css */
 /*Generalizo la estetica de la web*/
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --header-bg: #f0f0f0;
+  --hover-color-light: #e0e0e0;
 
-* {
+  --bg-color-dark: #000000;
+  --text-color-dark: #fff;
+  --header-bg-dark: #333;
+  --hover-color-dark: #555;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body {
   font-family: 'Anton SC', sans-serif;
-  /* Otros estilos */
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
-body.light-mode {
+.contenedor-principal {
+  min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
-body.dark-mode {
+#dark-mode-toggle:checked ~ .contenedor-principal {
   background-color: var(--bg-color-dark);
   color: var(--text-color-dark);
 }
 
+#dark-mode-toggle:checked ~ .contenedor-principal .body-header,
+#dark-mode-toggle:checked ~ .contenedor-principal .footer {
+  background-color: var(--header-bg-dark);
+  color: var(--text-color-dark);
+}
+
+.icon-dark {
+  display: none;
+}
+
+#dark-mode-toggle:checked ~ .contenedor-principal .icon-dark {
+  display: inline;
+}
+
+#dark-mode-toggle:checked ~ .contenedor-principal .icon-light {
+  display: none;
+}
