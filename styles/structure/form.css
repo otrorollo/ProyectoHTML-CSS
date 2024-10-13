@@ -92,19 +92,13 @@ fieldset legend {
 }
 
 /* Estilos para los botones */
-.form-buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 .form-button {
   flex: 1;
   padding: 0.75rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .form-button[type="submit"] {
@@ -117,6 +111,14 @@ fieldset legend {
   color: white;
 }
 
+/* Hover para modo claro */
+.form-button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-button[type="reset"]:hover {
+  background-color: #da190b;
+}
 /* Estilos para modo oscuro */
 #dark-mode-toggle:checked ~ .form-section {
   background-color: var(--header-bg-dark);
@@ -130,10 +132,13 @@ fieldset legend {
   border-color: var(--text-color-dark);
 }
 
-#dark-mode-toggle:checked ~ .form-section .form-button {
-  background-color: var(--hover-color-dark);
+#dark-mode-toggle:checked ~ .form-section .form-button[type="submit"]:hover {
+  background-color: #2d662f;
 }
 
+#dark-mode-toggle:checked ~ .form-section .form-button[type="reset"]:hover {
+  background-color: #8f1208;
+}
 #dark-mode-toggle:checked ~ .form-section h2,
 #dark-mode-toggle:checked ~ .form-section label,
 #dark-mode-toggle:checked ~ .form-section legend {
