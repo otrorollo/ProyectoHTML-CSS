@@ -1,0 +1,151 @@
+/* Estilos generales del formulario */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.form-section {
+  font-family: 'Rubik', sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--header-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Estilos para los grupos de campos */
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-field {
+  flex: 1;
+}
+
+/* Estilos para etiquetas */
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Estilos para inputs y textarea */
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Estilos para el fieldset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+fieldset legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Estilos para los radio buttons */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Estilos para el checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Estilos para los botones */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-button[type="reset"] {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilos para modo oscuro */
+#dark-mode-toggle:checked ~ .form-section {
+  background-color: var(--header-bg-dark);
+  color: var(--text-color-dark);
+}
+
+#dark-mode-toggle:checked ~ .form-section input,
+#dark-mode-toggle:checked ~ .form-section textarea {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  border-color: var(--text-color-dark);
+}
+
+#dark-mode-toggle:checked ~ .form-section .form-button {
+  background-color: var(--hover-color-dark);
+}
+
+#dark-mode-toggle:checked ~ .form-section h2,
+#dark-mode-toggle:checked ~ .form-section label,
+#dark-mode-toggle:checked ~ .form-section legend {
+  color: var(--text-color-dark);
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+}
