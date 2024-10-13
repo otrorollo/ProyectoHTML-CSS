@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title> John Wick PORTFOLIO</title>
     <!-- imagen en pestaña-->
     <link 
@@ -55,22 +58,22 @@
       <nav aria-label="Main web navigation">
         <ul>
             <li>
-              <a href="/index.html">
+              <a href="#">
                 <img src="/assets/logos/hotel.ico" alt="home">
                   HOME</a></li>
 
             <li>
-              <a href="/index.html">
+              <a href="#about">
                 <img src="/assets/logos/burbuja-de-chat.png" alt="ABOUT">
                   ABOUT</a></li>
 
             <li>
-              <a href="/index.html">
+              <a href="#Biografía">
                 <img src="/assets/logos/usuario dark.png" alt="BIO">
                   BIO</a></li>
 
             <li>
-              <a href="/index.html">
+              <a href="#skills">
                 <img src="/assets/logos/pensamiento-critico.png" alt="skills">
                   SKILLS</a></li>
 
@@ -89,53 +92,69 @@
   </header>
   <main class="holy-grail-layout">
     <div class= "left-sidebar"></div> 
-    <div class="main-content"></div>
-    <section class="hero">
-      <div class="hero-text"></div>
-        <h1><span>Yo soy</span>John Wick</h1>
-          <p>Ex-asesino a sueldo y experto en artes marciales</p>
-            <div class="hero-image-containter">
-              <img class="hero-image"
-              type="image/jpg"
-              sizes="(max-width: 3500px) 40vw, 1400px"
-              srcset="/assets/img/john_puños_scale,w_480.jpg 480w,
-              /assets/img/john_puños_scale,w_859.jpg 859w,
-              /assets/img/john_puños_scale,w_1262.jpg 1262w,
-              /assets/img/john_puños_scale,1400.jpg 1400w"
-              src="/assets/img/john puños.jpg"
-              alt="frontal foto personaje" >
-            </div>
-      </section>
-    <section id="Biografía">
-      <!-- Aquí irá la información sobre John Wick -->
-      <h3>BIOGRAFÍA</h3>
-      <p>Me conocen por muchos nombres... 
-        <strong>Nombre:</strong>  John Wick
-        <strong>Alias:</strong>  Baba Yaga (El Hombre del Saco) 
-        <strong>Te contaré qué: </strong>  
-        Soy Ex-asesino a sueldo retirado, soy Experto en artes marciales y manejo de armas y estoy realmente motivado por la venganza trás la muerte de mi perro.
-        Nací en la unión Soviética, quedé huérfano a una edad temprana antes de ser acogido por un viejo amigo de mi padre, que acabó convirtiéndose en mi mentor. 
-        Pasé gran parte de su adolescencia en Ensenada, Baja California. 
-        En un momento dado, fuí reclutado por un grupo del CMMP y entrenado por su líder, una mujer conocida como "la Directora", en Nueva York. Bajo la supervisión de la Directora, fuí entrenado como asesino a sueldo y aprendí habilidades que incluían artes marciales, armas de fuego y de otro tipo, conducción táctica, infiltración, escapología, etc. Mi nombre real es Jovonovich adopté más tarde el nombre de "Jonathan Wick", o "John Wick" para abreviar, como forma anglicista de mi nombre de nacimiento.
-      </p>
-    </section>
-    <section>
-        <!-- Aquí irán las habilidades de John Wick con barras de progreso -->
-        <h3 class="skills" id="skills">Habilidades</h3>
-        <div>
-          <h4>Combate cuerpo a cuerpo: 95% </h4>
-          <progress value="95" max="100"></progress>
-          <h4>Puntería: 98% </h4>
-          <progress value="98" max="100"></progress>
-          <h4>Estrategia: 90%</h4>
-          <progress value="90" max="100"></progress>
-          <h4>Supervivencia: 93%</h4> 
-          <progress value="93" max="100"></progress>
-          <h4>Conducción: 88%</h4> 
-          <progress value="88" max="100"></progress>
-          <h4>Amor a su perro:100%</h4>
-          <progress value="100" max="100"></progress>
+      <div class="main-content"></div>
+      <section class="hero">
+        <div class="hero-text">
+          <h1><span>Yo soy</span></h1>
+            <h1>John Wick</h1>
+            <p>Ex-asesino a sueldo y experto en artes marciales</p>
         </div>
+          <div class="hero-image-containter">
+            <img class="hero-image"
+            type="image/jpg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+            srcset=
+            "/assets/img/john_puños_scale,w_180.jpg 180w,
+            /assets/img/john_puños_scale,w_1012.jpg 1012w,
+            /assets/img/john_puños_scale,w_1513.jpg 1513w,
+            /assets/img/john_puños_scale,w_1854.jpg 1854w,
+            /assets/img/john_puños_scale,w_2160.jpg 2160w"
+            src="/assets/img/john_puños_scale,w_2160.jpg"
+            alt="frontal foto personaje" >
+          </div>
+          <!-- 100% del ancho en móviles, 80% en tablets y pantallas medianas, y 60% en pantallas grandes, aclaro para recordar-->
+        </section>
+      <section id="Biografía" class="Biografía">
+        <!-- Aquí irá la información sobre John Wick -->
+        <h3>BIOGRAFÍA</h3>
+        <p>Me conocen por muchos nombres... 
+          <strong>Nombre:</strong>  John Wick
+          <strong>Alias:</strong>  Baba Yaga (El Hombre del Saco) 
+          <strong>Te contaré qué: </strong>  
+          Soy Ex-asesino a sueldo retirado, soy Experto en artes marciales y manejo de armas y estoy realmente motivado por la venganza trás la muerte de mi perro.
+          Nací en la unión Soviética, quedé huérfano a una edad temprana antes de ser acogido por un viejo amigo de mi padre, que acabó convirtiéndose en mi mentor. 
+          Pasé gran parte de su adolescencia en Ensenada, Baja California. 
+          En un momento dado, fuí reclutado por un grupo del CMMP y entrenado por su líder, una mujer conocida como "la Directora", en Nueva York. Bajo la supervisión de la Directora, fuí entrenado como asesino a sueldo y aprendí habilidades que incluían artes marciales, armas de fuego y de otro tipo, conducción táctica, infiltración, escapología, etc. Mi nombre real es Jovonovich adopté más tarde el nombre de "Jonathan Wick", o "John Wick" para abreviar, como forma anglicista de mi nombre de nacimiento.
+        </p>
+      </section>
+      <section class="skills" id="skills">
+          <!-- Aquí irán las habilidades de John Wick con barras de progreso -->
+          <h3>Habilidades</h3>
+          <div class="skills-container">
+            <h4>Combate cuerpo a cuerpo: 95% </h4>
+            <progress value="95" max="100"></progress>
+          </div>
+          <div class="skills-container">
+            <h4>Puntería: 98%</h4>
+            <progress value="98" max="100"></progress>
+          </div>
+          <div class="skills-container">
+            <h4>Estrategia: 90%</h4>
+            <progress value="90" max="100"></progress>
+          </div>
+          <div class="skills-container">
+            <h4>Supervivencia: 93%</h4>
+            <progress value="93" max="100"></progress>
+          </div>
+          <div class="skills-container">
+            <h4>Conducción: 88%</h4>
+            <progress value="88" max="100"></progress>
+          </div>
+          <div class="skills-container">
+            <h4>Amor a su perro: 100%</h4>
+            <progress value="100" max="100"></progress>
+          </div>
+        </section>
         <div class="right-sidebar"></div>
     </section>
   

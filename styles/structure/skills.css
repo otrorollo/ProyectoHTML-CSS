@@ -1,0 +1,99 @@
+#skills {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#skills h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#skills h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.progress-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+
+.skill-item {
+  width: 100%;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+progress {
+  width: 80%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 10px auto;
+  border: none;
+  border-radius: 10px;
+}
+
+progress[value] {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 1.5s ease-out, background-color 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 1.5s ease-out, background-color 0.3s ease;
+}
+
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.skill-item.animate progress::-webkit-progress-value {
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+.skill-item.animate progress::-moz-progress-bar {
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+.skill-item:hover h4 {
+  color: #45a049;
+}
+
+.skill-item:hover progress::-webkit-progress-value,
+.skill-item:hover progress::-moz-progress-bar {
+  background-color: #45a049;
+  box-shadow: 0 0 10px rgba(69, 160, 73, 0.5);
+}

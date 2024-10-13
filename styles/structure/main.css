@@ -1,6 +1,6 @@
 /* Estilos generales */
 main {
-  padding: 20px;
+  padding: 5px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -9,23 +9,24 @@ main {
 .hero {
   position: relative;
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 60px; /* Ajusta este valor según la altura de tu header */
+  overflow: hidden;
 }
 
-.hero h1, .hero p {
+.hero-text {
   position: relative;
-  z-index: 2;
-  background-color: transparent; /* Fondo de la imagen */
+  padding: 20px 10px;
   color: var(--text-color);
-  padding: 10px;
-  margin: 0 auto 10px;
-  max-width: 80%;
+  background-color: transparent;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero h1 + h1 {
+  margin-top: 10px;
+  font-size: 4rem;
 }
 
 .hero h1 span {
@@ -34,39 +35,158 @@ main {
 }
 
 .hero p {
+  margin-top: 10px;
   font-size: 1.2rem;
+}
+
+.hero-image-container {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .hero img {
   width: 100%;
-  max-width: 800px;
   height: auto;
   display: block;
+}
+
+/* BIOGRAFIA */
+#Biografía {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+#Biografía h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#Biografía p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Skills Section */
+#skills {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
+  max-width: 800px;
   margin: 0 auto;
 }
 
+#skills h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#skills h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.progress-bar-container {
+  margin: 0 auto 20px;
+}
+
+progress {
+  width: 80%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress[value] {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #f3f3f3;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #4caf50;
+  transition: width 1s ease-in-out;
+}
+
+progress:hover::-webkit-progress-value {
+  background-color: #8bc34a;
+}
+
+@keyframes fill-progress {
+  from { width: 0; }
+  to { width: var(--progress-width); }
+}
+
+.in-view progress[value]::-webkit-progress-value {
+  animation: fill-progress 2s ease forwards;
+}
+
 /* Media queries para responsividad */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .hero h1 {
-    font-size: 5rem;
+    font-size: 2rem;
+  }
+
+  .hero h1 + h1 {
+    font-size: 3rem;
   }
 
   .hero h1 span {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .hero p {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+
+  #Biografía, #skills {
+    padding: 0 15px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  main {
-    padding: 40px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h1 + h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero h1 span {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .hero-image-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-image-container {
+    max-width: 80%;
   }
 
   .hero h1 {
-    font-size: 7rem;
+    font-size: 3.5rem;
+  }
+
+  .hero h1 + h1 {
+    font-size: 5.5rem;
   }
 
   .hero h1 span {
@@ -79,5 +199,12 @@ main {
 
   .hero img {
     max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hero-image-container {
+    max-width: 70%;
   }
 }
